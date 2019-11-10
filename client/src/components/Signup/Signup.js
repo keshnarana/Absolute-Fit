@@ -14,6 +14,10 @@ const styles = theme => ({
     paddingBottom: theme.spacing.unit * 2,
     margin: '4%'
   },
+  button: {
+    margin: theme.spacing(1),
+    backgroundColor: 'lightgreen'
+  },
   margin: {
     margin: theme.spacing.unit
   }
