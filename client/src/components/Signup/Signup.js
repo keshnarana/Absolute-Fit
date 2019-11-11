@@ -12,11 +12,17 @@ const styles = theme => ({
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
+    backgroundColor: 'rgba(10,45,89, 0.4)',
+    width: '700px',
+    height: '500px',
+    margin: 'auto',
     margin: '4%'
   },
   button: {
-    margin: theme.spacing(1),
-    backgroundColor: 'lightgreen'
+    
+    marginTop: '20px',
+ 
+    backgroundColor: 'orange',
   },
   margin: {
     margin: theme.spacing.unit
@@ -63,7 +69,17 @@ class Signup extends React.Component {
                 onChange={this.props.handleChange}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={3}>
+              <TextField
+                name="height"
+                label="height (optional)"
+                className={classes.textField}
+                margin="normal"
+                fullWidth
+                onChange={this.props.handleChange}
+              />
+            </Grid>
+            <Grid item xs={12} sm={3}>
               <TextField
                 name="weight"
                 label="Weight (optional)"
