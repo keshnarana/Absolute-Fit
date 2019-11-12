@@ -14,9 +14,9 @@ const styles = theme => ({
     paddingBottom: theme.spacing.unit * 2,
     backgroundColor: 'rgba(10,45,89, 0.4)',
     width: '700px',
-    height: '500px',
+    height: '400px',
     margin: 'auto',
-    margin: '4%'
+    marginTop: '20px',
   },
   button: {
     
