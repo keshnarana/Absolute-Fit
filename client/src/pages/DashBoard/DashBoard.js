@@ -47,9 +47,9 @@ class DashBoard extends Component {
         .add(-1, 'days')
         .format('MM.DD.YYYY');
 
-      if (user.days.length) {
-        mostRecentDate = moment(user.days[0].date).format('MM.DD.YYYY');
-      }
+      // if (user.days.length) {
+      //   mostRecentDate = moment(user.days[0].date).format('MM.DD.YYYY');
+      // }
 
       if (mostRecentDate === todaysDate) {
         this.setState({
