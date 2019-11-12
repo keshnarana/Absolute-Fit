@@ -20,7 +20,8 @@
     "react-script": "^2.0.5",
     "react-scripts": "1.1.4",
     "start": "^5.1.0",
-    "switch": "0.0.0"
+    "switch": "0.0.0",
+    "js-yaml": ">=3.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
