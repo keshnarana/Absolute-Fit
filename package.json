@@ -4,15 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "client": "cd client && npm run start",
+    "client": "node scripts/start-client.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
     "build": "cd client && npm run build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\""
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -35,8 +31,6 @@
     "bluebird": "^3.5.2",
     "concurrently": "^3.6.1",
     "express": "^4.16.4",
-    "gh-pages": "^2.1.1",
-    "if-env": "^1.0.4",
     "jsonwebtoken": "^8.3.0",
     "moment": "^2.24.0",
     "mongoose": "^5.7.9",
@@ -47,5 +41,10 @@
   },
   "engines": {
     "node": "8.11.1"
+  },
+  "root": "build/",
+  "clean_urls": false,
+  "routes": {
+    "/**": "index.html"
   }
 }

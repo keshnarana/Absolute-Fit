@@ -5,7 +5,7 @@ require('../config/passport')(passport);
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const User = require('../models/User.js');
+const User = require('../models/User');
 
 router.post('/register', (req, res) => {
 // for user sign up
