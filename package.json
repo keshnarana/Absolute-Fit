@@ -40,7 +40,8 @@
     "passport-jwt": "^4.0.0"
   },
   "engines": {
-    "node": "8.11.1"
+    "node": "10.15.3",
+    "npm": "6.11.3"
   },
   "root": "build/",
   "clean_urls": false,
