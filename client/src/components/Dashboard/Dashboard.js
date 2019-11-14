@@ -1,18 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import React from './node_modules/react';
+import PropTypes from './node_modules/prop-types';
+import { withStyles } from './node_modules/@material-ui/core/styles';
+import Grid from './node_modules/@material-ui/core/Grid';
+import Card from './node_modules/@material-ui/core/Card';
+import CardContent from './node_modules/@material-ui/core/CardContent';
+import Typography from './node_modules/@material-ui/core/Typography';
 
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
-import Tooltip from '@material-ui/core/Tooltip';
+import Table from './node_modules/@material-ui/core/Table';
+import TableBody from './node_modules/@material-ui/core/TableBody';
+import TableCell from './node_modules/@material-ui/core/TableCell';
+import TableRow from './node_modules/@material-ui/core/TableRow';
+import Tooltip from './node_modules/@material-ui/core/Tooltip';
 
-import FontAwesome from 'react-fontawesome';
+import FontAwesome from './node_modules/react-fontawesome';
 
 
 

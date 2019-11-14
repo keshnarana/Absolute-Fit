@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from './node_modules/react';
+import axios from './node_modules/axios';
 import SignupC from '../../components/SignupC';
 
 class Signup extends Component {
