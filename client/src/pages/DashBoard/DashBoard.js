@@ -1,8 +1,8 @@
-import React, { Component } from './node_modules/react';
+import React, { Component } from 'react';
 import DashBoardC from '../../components/DashBoard';
-import { Redirect } from './node_modules/react-router-dom';
-import axios from './node_modules/axios';
-import moment from './node_modules/moment';
+import { Redirect } from 'react-router-dom';
+import axios from 'axios';
+import moment from 'moment';
 
 
 class DashBoard extends Component {
