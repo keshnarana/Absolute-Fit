@@ -20,7 +20,7 @@ const styles = {
     marginLeft: "5%",
     marginRight: "5%",
     marginTop:  "5%",
-    backgroundColor: 'orange',
+    backgroundColor: 'rgba(130, 130, 130, 0.5)',
     marginBottom: "25%"
   },
   media: {

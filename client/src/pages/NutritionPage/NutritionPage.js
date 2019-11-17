@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Nutrition from '../../components/Nutrition';
+import NutritionC from '../../components/NutritionC';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import moment from "moment"
@@ -149,7 +149,7 @@ class Nutrition extends Component {
     return (
       <div>
         {this.renderRedirect()}
-        <Nutrition
+        <NutritionC
           quantities={this.state.quantities}
           dates={this.state.dates}
           handleChange={this.handleChange.bind()}
