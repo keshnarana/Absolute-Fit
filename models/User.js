@@ -8,6 +8,7 @@ const UserSchema = new Schema({
   username: { type: String, require: true, unique: true },
   password: { type: String, require: true },
   weight: { type: Number, required: false },
+  height: { type: Number, required: false },
   days: [{ type: Schema.Types.ObjectId, ref: 'Day' }]
 });
 

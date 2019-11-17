@@ -34,10 +34,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "engines": {
-    "npm": "6.11.3",
-    "node": "10.15.3"
-  },
   "proxy": "http://localhost:3001",
   "root": "build/",
   "clean_urls": false,

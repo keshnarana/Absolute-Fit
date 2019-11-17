@@ -81,6 +81,17 @@ router.post('/updateWeight', passport.authenticate('jwt', { session: false}), (r
     }
    }
   );
+  router.post('/updateHeight', passport.authenticate('jwt', { session: false}), (req, res) => {
+    const token = getToken(req.headers);
+    if (token) {
+      
+      console.log("Height is being updated");
+      db.Day.updateHeight(req, res);
+    } else {
+      return res.status(403).send({ success: false, msg: 'Unauthorized.' });
+    }
+   }
+  );
   
   
   // Gets all the days for a given userId

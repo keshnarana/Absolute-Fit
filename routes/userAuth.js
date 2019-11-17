@@ -5,7 +5,7 @@ require('../config/passport')(passport);
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const User = require('../models/User');
+const User = require('../models/User.js');
 
 router.post('/register', (req, res) => {
 // for user sign up
@@ -23,7 +23,8 @@ router.post('/register', (req, res) => {
       password: req.body.password,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      weight: req.body.weight
+      weight: req.body.weight,
+      height: req.body.height,
     });
 
     newUser.save(err => {

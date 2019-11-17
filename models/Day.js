@@ -8,7 +8,8 @@ const daySchema = new Schema({
     nutrition: { type: Number, default: 0 },
     water: { type: Number, default: 0 },
     totalActivity: { type: Number, default: 0 },
-    weight: {type: Number}
+    weight: {type: Number},
+    height: {type: Number}
 }); 
 
 const Day = mongoose.model("Day", daySchema);

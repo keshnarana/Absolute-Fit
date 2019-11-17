@@ -36,7 +36,7 @@ class DashBoard extends Component {
     this.setState({ userId: localStorage.getItem('userId') });
     let todaysDate = moment().format('MM.DD.YYYY');
 
-    let url = `/api/absolutefit/user/${localStorage.getItem('userId')}`;
+    let url = `/api/absoluteFit/user/${localStorage.getItem('userId')}`;
     axios.defaults.headers.common['Authorization'] = localStorage.getItem(
       'jwtToken'
     );
@@ -70,7 +70,7 @@ class DashBoard extends Component {
         });
 
         axios
-          .post('/api/absolutefit/newDay', {
+          .post('/api/absoluteFit/newDay', {
             userId: this.state.userId,
             weight: this.state.currentWeight,
             height: this.state.currentHeight,
