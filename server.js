@@ -5,7 +5,6 @@ const routes = require('./routes');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3001;
-const morgan = require('morgan');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -15,12 +14,8 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 }
 app.use(routes);
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build/index.html'), function(err) {
-    if (err) {
-      res.status(500).send(err);
-    }
-  });
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 // Connect to the Mongo DB
@@ -29,7 +24,7 @@ mongoose.connect(
   { useNewUrlParser: true }
 );
 
-app.use(morgan('dev'));
+
 
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
