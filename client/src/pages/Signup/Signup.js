@@ -43,7 +43,7 @@ class Signup extends Component {
         password: this.state.password
       };
 
-      axios.post('userAuth/register', userDetails).then(result => {
+      axios.post('/userAuth/register', userDetails).then(result => {
         this.props.history.push('/login');
       });
     } else {

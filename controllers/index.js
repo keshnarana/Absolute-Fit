@@ -1,4 +1,5 @@
 module.exports = {
-    User: require("./userController"),
- 
+    User: require("./usercontroller"),
+    Day: require("./daycotroller"),
+    Exercise: require("./exercisecontroller"),
 }

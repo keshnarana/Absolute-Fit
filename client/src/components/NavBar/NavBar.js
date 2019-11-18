@@ -63,11 +63,7 @@ class Navbar extends React.Component {
             </ListItem>
           </a>
           <Divider />
-          <a style={{ textDecoration: 'none', color: 'white' }} href="/water">
-            <ListItem button>
-              <ListItemText primary="Water" />
-            </ListItem>
-          </a>
+         
           <a
             style={{ textDecoration: 'none', color: 'white' }}
             href="/nutrition"

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Exercise from '../../components/Exercise';
+import ExerciseC from '../../components/ExerciseC';
 import { Redirect } from 'react-router-dom';
 import moment from "moment"
 import axios from "axios"
@@ -93,7 +93,7 @@ class Exercise extends Component {
     return (
       <div>
         {this.renderRedirect()}
-        <Exercise
+        <ExerciseC
           dates={this.state.dates}
           quantities={this.state.quantities}
           totalActivity={this.state.dailyTotal}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DashBoardC from '../../components/DashBoard';
+import Dashboard from '../../components/Dashboard';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
@@ -93,7 +93,7 @@ class DashBoard extends Component {
     return (
       <div>
         {this.renderRedirect()}
-        <DashBoardC
+        <Dashboard
          
           nutrition={this.state.nutritionPoints}
           weight={this.state.currentWeight}

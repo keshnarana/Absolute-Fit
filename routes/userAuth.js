@@ -8,13 +8,13 @@ const router = express.Router();
 const User = require('../models/User.js');
 
 router.post('/register', (req, res) => {
-// for user sign up
+
   console.log('register route reached');
 
   if (!req.body.username || !req.body.password) {
     res.json({
       success: false,
-      msg: 'Please enter username and password.'
+      msg: 'Please pass username and password.'
     });
   } else {
 
@@ -43,6 +43,7 @@ router.post('/register', (req, res) => {
 
     )}; // end else
 });
+
 
 router.post('/login', (req, res) => {
 // log in for existing users

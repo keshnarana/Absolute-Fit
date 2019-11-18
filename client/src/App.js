@@ -4,8 +4,8 @@ import NavBar from './components/NavBar';
 import DashBoard from './pages/DashBoard';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import NutritionPage from './pages/NutritionPage';
-import ExercisePage from './pages/ExercisePage';
+import Nutrition from './pages/NutritionPage';
+import Exercise from './pages/ExcersisePage';
 
 
 import './App.css';
@@ -18,8 +18,8 @@ const App = () => (
       <Route exact path="/" component={DashBoard} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
-        <Route exact path="/nutrition" component={NutritionPage} />
-        <Route exact path="/exercise" component={ExercisePage} />
+        <Route exact path="/nutrition" component={Nutrition} />
+        <Route exact path="/exercise" component={Exercise} />
      
       </Switch>
     </div>
