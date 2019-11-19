@@ -49,7 +49,7 @@ class Exercise extends Component {
   }
 
   handleDurationChange(e) {
-    this.setState({ newDuration: parseInt(e.target.value) }, () => {
+    this.setState({ newDuration: parseInt(e.target.value,10) }, () => {
       console.log(this.state.newDuration)
     });
   }

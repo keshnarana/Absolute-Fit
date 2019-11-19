@@ -21,7 +21,7 @@ app.get("*", (req, res) => {
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost:27017/AbsoluteFit',
-  { useNewUrlParser: true }
+  { useNewUrlParser: true,useUnifiedTopology: true }
 );
 
 
