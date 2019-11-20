@@ -72,7 +72,7 @@ class Signup extends React.Component {
             <Grid item xs={12} sm={3}>
               <TextField
                 name="height"
-                label="height (optional)"
+                label="height-cm (optional)"
                 className={classes.textField}
                 margin="normal"
                 fullWidth
@@ -82,7 +82,7 @@ class Signup extends React.Component {
             <Grid item xs={12} sm={3}>
               <TextField
                 name="weight"
-                label="Weight (optional)"
+                label="Weight-kg (optional)"
                 className={classes.textField}
                 margin="normal"
                 fullWidth

@@ -82,7 +82,7 @@ class Navbar extends React.Component {
           </a>
           <a style={{ textDecoration: 'none', color: 'white' }} href="/weight">
             <ListItem button>
-              <ListItemText primary="Weight" />
+              <ListItemText primary="Bmi" />
             </ListItem>
           </a>
           <a style={{ textDecoration: 'none', color: 'white' }} href="/info">

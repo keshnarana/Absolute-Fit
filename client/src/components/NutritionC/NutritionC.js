@@ -30,6 +30,9 @@ const styles = theme => ({
   },
   expansionPanelStyle: {
     margin: 11
+  },
+  listItem:{
+    padding: '0px'
   }
 });
 
