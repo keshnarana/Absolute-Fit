@@ -1,29 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from 'react-fontawesome';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Tooltip from '@material-ui/core/Tooltip';
-import ChartsPie from './../ChartsPie';
+
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
+import Tooltip from '@material-ui/core/Tooltip';
+import FontAwesome from 'react-fontawesome';
+import ChartsPie from './../ChartsPie';
 
 
-const styles  = theme => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    flexGrow: 1,
-    
-    marginBottom: "5%"
-  },
-
+const styles = {
   cardUser: {
     marginLeft: "5%",
     marginRight: "5%",
@@ -56,7 +48,11 @@ const styles  = theme => ({
   infoButton: {
     minWith: 0
   },
- 
+  root: {
+    flexGrow: 1,
+    
+    marginBottom: "5%"
+  },
   gridContainer: {
     marginTop: 2
   },
@@ -84,9 +80,7 @@ const styles  = theme => ({
   nameTitle: {
     marginTop: "8%"
   },
-c:{ marginTop: "-50px"}
-
-});
+c:{ marginTop: "-50px"}};
 
 class Dashboard extends React.Component {
   render() {
@@ -124,13 +118,13 @@ class Dashboard extends React.Component {
                   <TableBody>
                   
                     <TableRow>
-                      <TableCell className={classes.tableCellStyle} >
+                      <TableCell className={classes.tableCellStyle}  >
                         Nutrition (Points)
                       </TableCell>
-                      <TableCell className={classes.tableCellStyle} >
+                      <TableCell className={classes.tableCellStyle}  >
                         {this.props.nutrition}
                       </TableCell>
-                      <TableCell className={classes.tableCellStyle}>
+                      <TableCell className={classes.tableCellStyle} >
                         <Tooltip title="Go to Nutrition Page" placement="right">
                         
                             <a
@@ -151,13 +145,13 @@ class Dashboard extends React.Component {
                       </TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className={classes.tableCellStyle} >
+                      <TableCell className={classes.tableCellStyle}  >
                         Exercise (Duration)
                       </TableCell>
                       <TableCell className={classes.tableCellStyle} >
                         {this.props.exercise}
                       </TableCell>
-                      <TableCell className={classes.tableCellStyle}>
+                      <TableCell className={classes.tableCellStyle} >
                         <Tooltip title="Go to Exercise Page" placement="right" >
                          
                             <a
@@ -184,7 +178,7 @@ class Dashboard extends React.Component {
                       <TableCell className={classes.tableCellStyle} >
                         {this.props.weight}
                       </TableCell>
-                      <TableCell className={classes.tableCellStyle}>
+                      <TableCell className={classes.tableCellStyle} >
                         <Tooltip title="Go to Weight Page" placement="right">
                        
                             <a
@@ -211,7 +205,7 @@ class Dashboard extends React.Component {
                       <TableCell className={classes.tableCellStyle} >
                         {this.props.height}
                       </TableCell>
-                      <TableCell className={classes.tableCellStyle}>
+                      <TableCell className={classes.tableCellStyle} >
                         <Tooltip title="Go to Weight Page" placement="right">
                        
                             <a

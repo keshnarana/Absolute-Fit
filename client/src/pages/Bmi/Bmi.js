@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import WeightC from '../../components/Weight';
+import Weight from '../../components/Weight';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
 
-class Weight extends Component {
+class WeightP extends Component {
   state = {
     redirect: false,
     weight: 0,
@@ -146,7 +146,7 @@ class Weight extends Component {
     return (
       <div>
         {this.renderRedirect()}
-        <WeightC
+        <Weight
           handleChange={this.handleChange.bind(this)}
           handleChangeh={this.handleChangeh.bind(this)}
           handleClick={this.handleClick.bind(this)}
@@ -166,4 +166,4 @@ class Weight extends Component {
   }
 }
 
-export default Weight;
+export default WeightP;

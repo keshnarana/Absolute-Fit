@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-
+import ChartsBar from './../ChartsBar';
 
 const styles = theme => ({
   root: {
@@ -73,7 +73,7 @@ class NutritionC extends React.Component {
                   {questions.map(question => (
                     <Grid item xs={12}>
                       <ListItem
-                        key={question}
+                        key={question.toString()}
                         dense
                         button
                         className={classes.listItem}
@@ -102,6 +102,7 @@ class NutritionC extends React.Component {
               <Typography variant="title" align="center">
                 History (Last 7 Days)
               </Typography> 
+              <ChartsBar quantities={this.props.quantities} dates={this.props.dates}/>
             </Paper>
           </Grid>
         </Grid>

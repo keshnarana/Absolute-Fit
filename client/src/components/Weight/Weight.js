@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
+import ChartsLine from './../ChartsLine';
 
 
 
@@ -54,7 +55,7 @@ const styles = theme => ({
   }
 });
 
-class WeightC extends React.Component {
+class Weight extends React.Component {
 
   render() {
     const { classes } = this.props;
@@ -120,7 +121,8 @@ class WeightC extends React.Component {
               <Typography variant="title" align="center">
                 History (Last 30 Days)
               </Typography>
-            
+              <ChartsLine quantities={this.props.quantities} dates={this.props.dates}/>
+       
                    </Paper>
             <br></br>
             <Grid item xs={12} sm={6}>
@@ -152,8 +154,8 @@ class WeightC extends React.Component {
   }
 }
 
-WeightC.propTypes = {
+Weight.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(WeightC);
+export default withStyles(styles)(Weight);

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Pie } from 'react-chartjs-2';
+import './Charts.css';
 
 
 
@@ -8,7 +9,7 @@ class Chart extends Component {
      renderChart() {
          let chartData = {
 
-           labels: [ 'Exercise', 'Nutrition'],
+           labels: ['Exercise', 'Nutrition'],
    
            datasets:[{
                strokeColor: "rgba(100, 190, 154, 1)",

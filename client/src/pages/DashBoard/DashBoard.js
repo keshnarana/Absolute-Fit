@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Dashboard from '../../components/Dashboard';
+import DashBoardComponent from '../../components/DashBoard';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
-
 
 class DashBoard extends Component {
   state = {
@@ -47,9 +46,9 @@ class DashBoard extends Component {
         .add(-1, 'days')
         .format('MM.DD.YYYY');
 
-      // if (user.days.length) {
-      //   mostRecentDate = moment(user.days[0].date).format('MM.DD.YYYY');
-      // }
+      if (user.days.length) {
+        mostRecentDate = moment(user.days[0].date).format('MM.DD.YYYY');
+      }
 
       if (mostRecentDate === todaysDate) {
         this.setState({
@@ -93,8 +92,7 @@ class DashBoard extends Component {
     return (
       <div>
         {this.renderRedirect()}
-        <Dashboard
-         
+        <DashBoardComponent
           nutrition={this.state.nutritionPoints}
           weight={this.state.currentWeight}
           height={this.state.currentHeight}
