@@ -4,7 +4,10 @@ module.exports = {
     //Day Controller
     createDay: function(req, res) {
         db.Day.findOne({date: req.body.date, userId: req.body.userId, weight: req.body.weight, height: req.body.height})
-        .then(
+        .then(dbDay => {
+            if (dbDay) {
+                return res.json(dbDay)
+            } else {
                 db.Day.create(req.body)
                 .then(newDbDay => {
                     db.User.findById({_id: req.body.userId})
@@ -14,8 +17,8 @@ module.exports = {
                     })
                     return res.json(newDbDay)
                 })
-            
-        )
+            }
+        })
     },
 
     updateWeight: function(req, res) {
