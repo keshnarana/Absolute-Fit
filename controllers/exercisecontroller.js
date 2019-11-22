@@ -11,12 +11,22 @@ module.exports = {
                 dayModel.exercises.push(exerciseModel._id)
                 dayModel.totalActivity = req.body.totalActivity
                 dayModel.save()
-                return res.send("Exercise Added")
+                return res.status(200)
             })
-            .catch(err => res.status(422).json(err))
-            return res.send("Exercise Added")
+            .catch(error => {
+                return res.status(400).json({
+                    error,
+                    message: 'error!',
+                })
+            })
+            return res.status(200)
         })
-        .catch(err => res.status(422).json(err));
+        .catch(error => {
+            return res.status(400).json({
+                error,
+                message: 'error!',
+            })
+        })
     },
 
 }
