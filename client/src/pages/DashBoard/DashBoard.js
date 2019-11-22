@@ -69,7 +69,7 @@ class DashBoard extends Component {
         });
 
         axios
-          .post('/api/healthtracker/newDay', {
+          .post('/api/absoluteFit/newDay', {
             userId: this.state.userId,
             weight: this.state.currentWeight,
             
