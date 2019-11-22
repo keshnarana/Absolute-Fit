@@ -135,7 +135,6 @@ class WeightP extends Component {
   
   }
 
-
   renderRedirect = () => {
     if (!localStorage.getItem('jwtToken')) {
       return <Redirect to="/login" />;

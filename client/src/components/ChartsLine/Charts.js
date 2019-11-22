@@ -3,7 +3,6 @@ import { Line } from 'react-chartjs-2';
 import './Charts.css';
 
 
-
 class Chart extends Component {
 
    renderChart(props) {

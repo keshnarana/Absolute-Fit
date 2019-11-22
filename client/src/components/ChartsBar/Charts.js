@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2';
 import './Charts.css';
-
 defaults.global.legend.display = false;
 
 class Chart extends Component {
