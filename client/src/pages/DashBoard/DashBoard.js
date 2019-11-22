@@ -69,10 +69,12 @@ class DashBoard extends Component {
         });
 
         axios
-          .post('/api/absoluteFit/newDay', {
+          .post('/api/healthtracker/newDay', {
             userId: this.state.userId,
             weight: this.state.currentWeight,
+            
             height: this.state.currentHeight,
+
             date: moment().format('MM.DD.YYYY')
           })
           .then(res => {
@@ -93,6 +95,7 @@ class DashBoard extends Component {
       <div>
         {this.renderRedirect()}
         <DashBoardComponent
+        
           nutrition={this.state.nutritionPoints}
           weight={this.state.currentWeight}
           height={this.state.currentHeight}

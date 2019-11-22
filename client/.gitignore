@@ -9,8 +9,8 @@
 /coverage
 
 # production
-/build
 
+jspm_packages/
 # misc
 .DS_Store
 .env.local
