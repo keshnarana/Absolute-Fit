@@ -16,7 +16,20 @@ module.exports = {
                     dbUser.save()
                 })
                 return res.json(newDbDay)
+                .catch(error => {
+                    return res.status(400).json({
+                        error,
+                        message: 'error!',
+                    })
+                })
             })
+            .catch(error => {
+                return res.status(400).json({
+                    error,
+                    message: 'error!',
+                })
+            })
+          
         }
     })
 },
