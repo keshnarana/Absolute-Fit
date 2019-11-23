@@ -65,6 +65,9 @@ const styles = {
   exerciseButton: {
     backgroundColor: '#ea6192b5'
   },
+ /*foodButton: {
+    backgroundColor: '#ea6192b5'
+  },*/
   weightButton: {
     backgroundColor: '#4d66f08a'
   },
