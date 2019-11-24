@@ -18,7 +18,7 @@ const styles = {
   cardUser: {
     marginLeft: "5%",
     marginRight: "5%",
-    marginTop:  "5%",
+    marginTop: "5%",
     backgroundColor: 'rgba(130, 130, 130, 0.5)',
     marginBottom: "25%"
   },
@@ -49,7 +49,7 @@ const styles = {
   },
   root: {
     flexGrow: 1,
-    
+
     marginBottom: "5%"
   },
   gridContainer: {
@@ -58,20 +58,20 @@ const styles = {
   paper: {
     textAlign: 'center'
   },
- 
+
   nutritionButton: {
     backgroundColor: '#10953bb8'
   },
   exerciseButton: {
     backgroundColor: '#ea6192b5'
   },
- /*foodButton: {
+  foodButton: {
     backgroundColor: '#ea6192b5'
-  },*/
+  },
   weightButton: {
     backgroundColor: '#4d66f08a'
   },
- 
+
   tableCellStyle: {
     padding: 0
   },
@@ -82,7 +82,8 @@ const styles = {
   nameTitle: {
     marginTop: "8%"
   },
-c:{ marginTop: "-50px"}};
+  c: { marginTop: "-50px" }
+};
 
 class Dashboard extends React.Component {
   render() {
@@ -96,9 +97,11 @@ class Dashboard extends React.Component {
             </Typography>
             <Grid container spacing={0} className={classes.c}>
               <Grid item xs={12} sm={6}>
-              <ChartsPie
+                <ChartsPie
                   nutritionChart={this.props.nutrition}
                   exerciseChart={this.props.exercise}
+                  foodChart={this.props.food}
+                  
                 />
               </Grid>
               <Grid item xs={12} sm={6} className={classes.c}>
@@ -118,7 +121,7 @@ class Dashboard extends React.Component {
                 </Typography>
                 <Table>
                   <TableBody>
-                  
+
                     <TableRow>
                       <TableCell className={classes.tableCellStyle}  >
                         Nutrition (Points)
@@ -128,21 +131,21 @@ class Dashboard extends React.Component {
                       </TableCell>
                       <TableCell className={classes.tableCellStyle} >
                         <Tooltip title="Go to Nutrition Page" placement="right">
-                        
-                            <a
-                              style={{ textDecoration: 'none', color: 'white' }}
-                              href="/nutrition"
-                            >
-                              <FontAwesome
+
+                          <a
+                            style={{ textDecoration: 'none', color: 'white' }}
+                            href="/nutrition"
+                          >
+                            <FontAwesome
                               name="fas fa-utensils"
-                                className="fas fa-utensils"
-                                size="lg"
-                                style={{
-                                  textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'
-                                }}
-                              />
-                            </a>
-                        
+                              className="fas fa-utensils"
+                              size="lg"
+                              style={{
+                                textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'
+                              }}
+                            />
+                          </a>
+
                         </Tooltip>
                       </TableCell>
                     </TableRow>
@@ -155,24 +158,53 @@ class Dashboard extends React.Component {
                       </TableCell>
                       <TableCell className={classes.tableCellStyle} >
                         <Tooltip title="Go to Exercise Page" placement="right" >
-                         
-                            <a
-                              style={{ textDecoration: 'none', color: 'white' }}
-                              href="/exercise"
-                            >
-                              <FontAwesome
-                               name="fas fa-utensils"
-                                className="fas fa-utensils"
-                                size="lg"
-                                style={{
-                                  textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'
-                                }}
-                              />
-                            </a>
-                          
+
+                          <a
+                            style={{ textDecoration: 'none', color: 'white' }}
+                            href="/exercise"
+                          >
+                            <FontAwesome
+                              name="fal fa-dumbbell"
+                              className="fal fa-dumbbell"
+                             
+                              size="lg"
+                              style={{
+                                textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'
+                              }}
+                            />
+                          </a>
+
                         </Tooltip>
                       </TableCell>
                     </TableRow>
+                    <TableRow>
+                      <TableCell className={classes.tableCellStyle}  >
+                        Food (Calories)
+                      </TableCell>
+                      <TableCell className={classes.tableCellStyle} >
+                        {this.props.food}
+                      </TableCell>
+                      <TableCell className={classes.tableCellStyle} >
+                        <Tooltip title="Go to Food Page" placement="right" >
+
+                          <a
+                            style={{ textDecoration: 'none', color: 'white' }}
+                            href="/food"
+                          >
+                            <FontAwesome
+                              name="fas fa-utensils"
+                              className="fas fa-utensils"
+                              size="lg"
+                              style={{
+                                textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'
+                              }}
+                            />
+                          </a>
+
+                        </Tooltip>
+                      </TableCell>
+                    </TableRow>
+
                     <TableRow>
                       <TableCell className={classes.tableCellStyle} >
                         Weight (kg)
@@ -182,21 +214,21 @@ class Dashboard extends React.Component {
                       </TableCell>
                       <TableCell className={classes.tableCellStyle} >
                         <Tooltip title="Go to Weight Page" placement="right">
-                       
-                            <a
-                              style={{ textDecoration: 'none', color: 'white' }}
-                              href="/weight"
-                            >
-                              <FontAwesome
-                               name="fas fa-weight"
-                                className="fas fa-weight"
-                                size="lg"
-                                style={{
-                                  textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'
-                                }}
-                              />
-                            </a>
-                      
+
+                          <a
+                            style={{ textDecoration: 'none', color: 'white' }}
+                            href="/weight"
+                          >
+                            <FontAwesome
+                              name="fas fa-weight"
+                              className="fas fa-weight"
+                              size="lg"
+                              style={{
+                                textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'
+                              }}
+                            />
+                          </a>
+
                         </Tooltip>
                       </TableCell>
                     </TableRow>
@@ -209,21 +241,21 @@ class Dashboard extends React.Component {
                       </TableCell>
                       <TableCell className={classes.tableCellStyle} >
                         <Tooltip title="Go to Weight Page" placement="right">
-                       
-                            <a
-                              style={{ textDecoration: 'none', color: 'white' }}
-                              href="/weight"
-                            >
-                              <FontAwesome
-                               name="fas fa-ruler-vertical"
-                                className="fas fa-ruler-vertical"
-                                size="lg"
-                                style={{
-                                  textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'
-                                }}
-                              />
-                            </a>
-                      
+
+                          <a
+                            style={{ textDecoration: 'none', color: 'white' }}
+                            href="/weight"
+                          >
+                            <FontAwesome
+                              name="fas fa-ruler-vertical"
+                              className="fas fa-ruler-vertical"
+                              size="lg"
+                              style={{
+                                textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'
+                              }}
+                            />
+                          </a>
+
                         </Tooltip>
                       </TableCell>
                     </TableRow>
