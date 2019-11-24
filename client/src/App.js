@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import NutritionPage from './pages/NutritionPage';
 import ExcersisePage from './pages/ExcersisePage';
+import FoodPage from './pages/FoodPage';
 import Bmi from './pages/Bmi';
 
 
@@ -22,6 +23,7 @@ const App = () => {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/nutrition" component={NutritionPage} />
         <Route exact path="/exercise" component={ExcersisePage} />
+        <Route exact path="/food" component={FoodPage}/>
         <Route exact path="/weight" component={Bmi} />
           </Switch>
     </div>
