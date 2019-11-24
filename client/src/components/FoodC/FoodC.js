@@ -213,7 +213,7 @@ class FoodC extends React.Component {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {this.renderTableRows(this.props.todaysActivities)}
+                  {this.renderTableRows(this.props.todaysCalCount)}
                 </TableBody>
               </Table>
             </Paper>

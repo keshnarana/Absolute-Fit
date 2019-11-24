@@ -11,7 +11,7 @@ class Food extends Component {
     newFood: "",
     newCalories: 0,
     dailyTotal: 0,
-    todaysActivity: [],
+    todaysCalCount: [],
     quantities: [],
     dates: []
   };
@@ -32,14 +32,14 @@ class Food extends Component {
       let datesArr = []
 
       for (let i = data.length - 1; i > -1; i --) {
-        foodQuantities.push(data[i].totalActivity)
+        foodQuantities.push(data[i].totalCalCount)
         datesArr.push(moment(data[i].date).format("MM/DD/YYYY"))
       }
 
       this.setState({
         currentDayId: data[0]._id,
-        dailyTotal: data[0].totalActivity,
-        todaysActivity: data[0].food,
+        dailyTotal: data[0].totalCalCount,
+        todaysCalCount: data[0].food,
         quantities: foodQuantities,
         dates: datesArr
       })
@@ -61,18 +61,18 @@ class Food extends Component {
   }
 
   addFoodItems() {
-    let newActivities = this.state.todaysActivity
-    newActivities.push({food: this.state.newFood, duration: this.state.newCalories})
+    let newCals = this.state.todaysCalCount
+    newCals.push({food: this.state.newFood, duration: this.state.newCalories})
     this.setState({
       dailyTotal: this.state.dailyTotal + this.state.newCalories,
-      todaysActivity: newActivities
+      todaysCalCount: newCals
     }, () => {
 
       axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
       axios.post('/api/absoluteFte.newFood', {
         food: this.state.newFood,
         calories: this.state.newCalories,
-        totalActivity: this.state.dailyTotal,
+        totalCalCount: this.state.dailyTotal,
         currentDayId: this.state.currentDayId
       })
       .then(data => console.log(data))
@@ -96,8 +96,8 @@ class Food extends Component {
         <FoodC
           dates={this.state.dates}
           quantities={this.state.quantities}
-          totalActivity={this.state.dailyTotal}
-          todaysActivities={this.state.todaysActivity}
+          totalCalCount={this.state.dailyTotal}
+          todaysActivities={this.state.todaysCalCount}
           addFoodItems={this.addFoodItems.bind(this)}
           handleFoodItems={this.handleFoodItems.bind(this)}
           handleCalorieCount={this.handleCalorieCount.bind(this)}

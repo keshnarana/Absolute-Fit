@@ -8,6 +8,7 @@ import NutritionPage from './pages/NutritionPage';
 import ExcersisePage from './pages/ExcersisePage';
 import FoodPage from './pages/FoodPage';
 import Bmi from './pages/Bmi';
+import MoreInfoPage from './pages/MoreInfoPage';
 
 
 import './App.css';
@@ -25,6 +26,7 @@ const App = () => {
         <Route exact path="/exercise" component={ExcersisePage} />
         <Route exact path="/food" component={FoodPage}/>
         <Route exact path="/weight" component={Bmi} />
+        <Route exact path="/Info" component={MoreInfoPage}/>
           </Switch>
     </div>
   </Router>
