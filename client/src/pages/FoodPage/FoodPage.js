@@ -62,14 +62,14 @@ class Food extends Component {
 
   addFoodItems() {
     let newCals = this.state.todaysCalCount
-    newCals.push({food: this.state.newFood, duration: this.state.newCalories})
+    newCals.push({food: this.state.newFood, calories: this.state.newCalories})
     this.setState({
       dailyTotal: this.state.dailyTotal + this.state.newCalories,
       todaysCalCount: newCals
     }, () => {
 
       axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
-      axios.post('/api/absoluteFte.newFood', {
+      axios.post('/api/absoluteFit.newFood', {
         food: this.state.newFood,
         calories: this.state.newCalories,
         totalCalCount: this.state.dailyTotal,
@@ -97,11 +97,11 @@ class Food extends Component {
           dates={this.state.dates}
           quantities={this.state.quantities}
           totalCalCount={this.state.dailyTotal}
-          todaysActivities={this.state.todaysCalCount}
+          todaysCalCount={this.state.todaysCalCount}
           addFoodItems={this.addFoodItems.bind(this)}
           handleFoodItems={this.handleFoodItems.bind(this)}
           handleCalorieCount={this.handleCalorieCount.bind(this)}
-          activity={this.state.newFood}
+          food={this.state.newFood}
         />
       </div>
     );

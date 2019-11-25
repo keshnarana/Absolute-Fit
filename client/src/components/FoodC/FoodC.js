@@ -121,13 +121,13 @@ class FoodC extends React.Component {
                 Food Tracker
               </Typography>
               <Typography className={classes.info} align="center">
-                Select a Food Items below and choose the calories.
+                Select a Food Items below.
                 
               </Typography>
 
               <Paper className={classes.progressColor}>
                 <Typography align="center" variant="body2">
-                  Current Progress: {this.props.totalActivity} cals
+                  Current Progress: {this.props.totalCalCount} cals
                 </Typography>
               </Paper>
 
@@ -141,7 +141,7 @@ class FoodC extends React.Component {
                     autoComplete="off"
                   >
                     <FormControl fullWidth className={classes.formControl}>
-                      <InputLabel htmlFor="Food-Count">FoodCount</InputLabel>
+                      <InputLabel htmlFor="Food-Count">Food Items</InputLabel>
                       <Select
                         value={this.props.food}
                         onChange={this.props.handleFoodItems}
@@ -159,11 +159,11 @@ class FoodC extends React.Component {
                         <MenuItem value={'FriedRice'}>
                         FriedRice
                         </MenuItem>
-                        <MenuItem value={'cereal'}>Boxing</MenuItem>
+                        <MenuItem value={'cereal'}>cereal</MenuItem>
                         <MenuItem value={'other'}>Other</MenuItem>
                       </Select>
                       <FormHelperText>
-                        Select the Food and calories
+                        Select the Food and add calories
                       </FormHelperText>
                     </FormControl>
                   </form>
@@ -189,7 +189,7 @@ class FoodC extends React.Component {
                   </form>
                 </Grid>
                 <Grid className={classes.submit} item xs={12}>
-                  <Button onClick={this.props.addFoodItem} variant="contained">
+                  <Button onClick={this.props.addFoodItems} variant="contained">
                     Submit
                   </Button>
                 </Grid>
