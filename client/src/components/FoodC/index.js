@@ -1,1 +1,1 @@
-export { default } from '../FoodC';
+export { default } from './FoodC';

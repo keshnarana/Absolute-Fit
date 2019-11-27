@@ -19,7 +19,16 @@ module.exports = {
                 path: "exercises",
                 model: "Exercise",
                 select: "-__v"
+            },
+
+            select: "-__v",
+            populate: {
+                path: "foods",
+                model: "Food",
+                select: "-__v"
             }
+
+
         })
         .then((userModel) => res.json(userModel))
         .catch(err => res.status(422).json(err));

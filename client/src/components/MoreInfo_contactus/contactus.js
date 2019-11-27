@@ -30,12 +30,10 @@ class Info extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-      
-
-        <Paper className={classes.root} align="center">
+              <Paper className={classes.root} align="center">
        
           <Typography variant="body2" className={classes.typeSpace} align="center">
-      contact map and email
+           contact map and email
           </Typography>
         </Paper>
       </div>

@@ -13,8 +13,8 @@ class Chart extends Component {
                strokeColor: "rgba(100, 190, 154, 1)",
                data: [
                    this.props.exerciseChart,
+                   this.props.nutritionChart,
                    this.props.foodChart,
-                   this.props.nutritionChart 
                ],
                 backgroundColor: [
                   '#825eb9b5',
