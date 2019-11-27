@@ -71,23 +71,23 @@ module.exports = {
     findDayByuserId: function(req, res) {
         db.Day
         .find({userId: req.params.userId}, null, {sort: {date: -1}, limit: 7} )
-        .populate("exercises")
+        .populate("exercises", "foods")
         .then(dbDays => {
             return res.json(dbDays)
         })
         .catch(err => res.status(422).json(err));
     },
 
-    findDayByuserId: function(req, res) {
+   /* findDayByuserId: function(req, res) {
         db.Day
         .find({userId: req.params.userId}, null, {sort: {date: -1}, limit: 7} )
-        .populate("food")
+        .populate("foods")
         .then(dbDays => {
             return res.json(dbDays)
         })
         .catch(err => res.status(422).json(err));
 
-    },
+    },*/
    findDayWeightByuserId: function(req, res) {
         db.Day
         .find({userId: req.params.userId}, null, {sort: {date: -1}, limit: 30} ) 

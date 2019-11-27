@@ -121,7 +121,7 @@ class FoodC extends React.Component {
                 Food Tracker
               </Typography>
               <Typography className={classes.info} align="center">
-                Select a Food Items below.
+                Select a Food Item below.
                 
               </Typography>
 
@@ -208,7 +208,7 @@ class FoodC extends React.Component {
               <Table>
                 <TableHead>
                   <TableRow>
-                    <TableCell>Food</TableCell>
+                    <TableCell>Foods</TableCell>
                     <TableCell>Calories</TableCell>
                   </TableRow>
                 </TableHead>

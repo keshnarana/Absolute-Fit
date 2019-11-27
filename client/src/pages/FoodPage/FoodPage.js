@@ -39,7 +39,7 @@ class Food extends Component {
       this.setState({
         currentDayId: data[0]._id,
         dailyTotal: data[0].totalCalCount,
-        todaysCalCount: data[0].food,
+        todaysCalCount: data[0].foods,
         quantities: foodQuantities,
         dates: datesArr
       })
@@ -49,7 +49,7 @@ class Food extends Component {
   }
 
   handleCalorieCount(e) {
-    this.setState({ newCalories: parseInt(e.target.value,10) }, () => {
+    this.setState({ newCalories: parseInt(e.target.value,100) }, () => {
       console.log(this.state.newCalories)
     });
   }
@@ -69,7 +69,7 @@ class Food extends Component {
     }, () => {
 
       axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
-      axios.post('/api/absoluteFit.newFood', {
+      axios.post('/api/absoluteFit/newFood', {
         food: this.state.newFood,
         calories: this.state.newCalories,
         totalCalCount: this.state.dailyTotal,
