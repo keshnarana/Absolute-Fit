@@ -20,7 +20,7 @@ app.get("*", (req, res) => {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost:27017/AbsoluteFit',
+  process.env.MONGODB_URI || 'mongodb://keshna:keshna1@ds241258.mlab.com:41258/heroku_f80n46qt',
   { useNewUrlParser: true,useUnifiedTopology: true }
 );
 
