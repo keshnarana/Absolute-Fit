@@ -48,7 +48,7 @@ class Food extends Component {
 
   }
 
-  handleCalorieCount(e) {
+  handleCaloriesCount(e) {
     this.setState({ newCalories: parseInt(e.target.value,100) }, () => {
       console.log(this.state.newCalories)
     });
@@ -100,7 +100,7 @@ class Food extends Component {
           todaysCalCount={this.state.todaysCalCount}
           addFoodItems={this.addFoodItems.bind(this)}
           handleFoodItems={this.handleFoodItems.bind(this)}
-          handleCalorieCount={this.handleCalorieCount.bind(this)}
+          handleCaloriesCount={this.handleCaloriesCount.bind(this)}
           food={this.state.newFood}
         />
       </div>

@@ -32,14 +32,14 @@ class DashBoard extends Component {
     }
   }
 
-  totalFoodCalories(arr) {
-    let totalcalories = 0;
+  totalFoodKals(arr) {
+    let totalKals = 0;
     for (let i = 0; i < arr.length; i++) {
-      totalcalories = totalcalories + arr[i].calories;
+      totalKals = totalKals + arr[i].Kals;
     }
 
-    if (totalcalories) {
-      return totalcalories;
+    if (totalKals) {
+      return totalKals;
     } else {
       return 0;
     }
@@ -70,7 +70,7 @@ class DashBoard extends Component {
           lastName: user.lastName,
           nutritionPoints: res.data.days[0].nutrition,
           exerciseMins: res.data.days[0].totalActivity,
-          foodcalories: res.data.days[0].totalActivity,
+          foodcalories: res.data.days[0].totalCalCount,
           currentDayId: res.data.days[0].id,
           currentWeight: res.data.days[0].weight,
           currentHeight: res.data.days[0].height
