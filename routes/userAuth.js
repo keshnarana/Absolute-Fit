@@ -6,6 +6,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 const User = require('../models/User.js');
+require('dotenv').config()
 
 router.post('/register', (req, res) => {
 
@@ -60,7 +61,7 @@ router.post('/login', (req, res) => {
       } else {
         user.comparePassword(req.body.password, (err, isMatch) => {
           if (isMatch && !err) {
-            const token = jwt.sign(user.toJSON(), settings.secret);
+            const token = jwt.sign(user.toJSON(), process.env.SECRET);
             res.json({
               success: true,
               token: 'JWT ' + token,
