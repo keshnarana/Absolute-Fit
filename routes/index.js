@@ -5,7 +5,7 @@ const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
 const userAuth = require('./userAuth');
-require('dotenv').config()
+
 
 // API Routes
 router.use("/api", apiRoutes);
@@ -15,8 +15,8 @@ router.use('/userAuth', userAuth);
 var transport = {
   host: 'smtp.gmail.com',
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSW
+    user: creds.USER,
+    pass: creds.PASS
   }
 }
 
