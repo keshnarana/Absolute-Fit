@@ -33,7 +33,16 @@ class Info extends React.Component {
               <Paper className={classes.root} align="center">
        
           <Typography variant="body2" className={classes.typeSpace} align="center">
-           contact map and email
+           <h2>contact us and email</h2>
+           <p> Note: We don’t offer phone support out of full dedication to our other help channels. 
+           Online support allows us to send and receive links and screenshots,
+           helping us answer questions and figure out issues more efficiently.  </p>
+
+           <h3>Write to us  at  absolutefit@att.com</h3>
+           <p>              
+             we’ll email you back as soon as we can </p>
+           
+           
           </Typography>
         </Paper>
       </div>

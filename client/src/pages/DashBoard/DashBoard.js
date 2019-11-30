@@ -35,7 +35,7 @@ class DashBoard extends Component {
   totalFoodKals(arr) {
     let totalKals = 0;
     for (let i = 0; i < arr.length; i++) {
-      totalKals = totalKals + arr[i].Kals;
+      totalKals = totalKals + arr[i].calories;
     }
 
     if (totalKals) {
