@@ -8,7 +8,7 @@ import NutritionPage from './pages/NutritionPage';
 import ExcersisePage from './pages/ExcersisePage';
 import FoodPage from './pages/FoodPage';
 import Bmi from './pages/Bmi';
-import MoreInfoPage from './pages/MoreInfoPage';
+import MoreInfoPage from './components/MoreInfo_contactus';
 
 
 import './App.css';

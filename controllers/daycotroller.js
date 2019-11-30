@@ -1,38 +1,25 @@
 const db = require("../models")
 module.exports = {
 
-   //Day Controller
-   createDay: function(req, res) {
-    db.Day.findOne({date: req.body.date, userId: req.body.userId, weight: req.body.weight})
-    .then(dbDay => {
-        if (dbDay) {
-            return res.json(dbDay)
-        } else {
-            db.Day.create(req.body)
-            .then(newDbDay => {
-                db.User.findById({_id: req.body.userId})
-                .then(dbUser => {
-                    dbUser.days.push(newDbDay._id)
-                    dbUser.save()
-                })
-                return res.json(newDbDay)
-                .catch(error => {
-                    return res.status(400).json({
-                        error,
-                        message: 'error!',
+      //Day Controller
+      createDay: function(req, res) {
+        db.Day.findOne({date: req.body.date, userId: req.body.userId, weight: req.body.weight,height: req.body.height })
+        .then(dbDay => {
+            if (dbDay) {
+                return res.json(dbDay)
+            } else {
+                db.Day.create(req.body)
+                .then(newDbDay => {
+                    db.User.findById({_id: req.body.userId})
+                    .then(dbUser => {
+                        dbUser.days.push(newDbDay._id)
+                        dbUser.save()
                     })
+                    return res.json(newDbDay)
                 })
-            })
-            .catch(error => {
-                return res.status(400).json({
-                    error,
-                    message: 'error!',
-                })
-            })
-          
-        }
-    })
-},
+            }
+        })
+    },
 
     updateWeight: function(req, res) {
         db.Day
