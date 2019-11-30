@@ -73,18 +73,6 @@ class ContactForm extends React.Component{
               <Paper className={classes.root} align="center">
        
           <Typography variant="body2" className={classes.typeSpace} align="center">
-
-           <h2>email us</h2>
-           <p> Note: We don’t offer phone support out of full dedication to our other help channels. 
-           Online support allows us to send and receive emails,
-           helping us answer questions and figure out issues more efficiently.  </p>
-
-       
-           <p>              
-             we’ll email you back as soon as we can </p>
-           
-           
-
           <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                   <div className="form-group">
                      
@@ -102,7 +90,6 @@ class ContactForm extends React.Component{
                 color="primary"
                 className={classes.button}>Submit</Button>
               </form>
-
           </Typography>
         </Paper>
       </div>

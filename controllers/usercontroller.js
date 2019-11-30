@@ -34,39 +34,6 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
 
-    /*findUserFoodById: function(req, res) {
-        db.User
-        .findByIdAndUpdate({_id: req.params.id})
-        .select("-__v -password")
-        .populate({
-            path: "days",
-            options: {
-                sort: {
-                    date: -1
-                }
-            },
-            
-
-           select: "-__v",
-            populate: {
-                path: "foods",
-                model: "Food",
-                select: "-__v"
-            }
-
-
-        })
-        .then((userModel) => res.json(userModel))
-        .catch(err => res.status(422).json(err));
-    },
-*/
-
-
-
-
-
-
-
     createUser: function(req, res) {
         db.User
         .create(req.body)

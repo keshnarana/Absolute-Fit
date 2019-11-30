@@ -163,7 +163,7 @@ class ExerciseC extends React.Component {
                         <MenuItem value={'other'}>Other</MenuItem>
                       </Select>
                       <FormHelperText>
-                        Select the workout and 
+                        Select the workout and duration
                       </FormHelperText>
                     </FormControl>
                   </form>

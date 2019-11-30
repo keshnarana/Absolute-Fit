@@ -176,14 +176,14 @@ class FoodC extends React.Component {
                     autoComplete="off"
                   >
                     <TextField
-                      id="addKals"
-                      label="Enter Kals"
-                      value={this.props.kals}
-                      onChange={this.props.handleCaloriesCount}
+                      id="addCalories"
+                      label="Enter Calories"
+                      value={this.props.calories}
+                      onChange={this.props.handleCalorieCount}
                       type="number"
                       className={classes.textField}
                       margin="normal"
-                      name="kals"
+                      name="calories"
                       fullWidth
                     />
                   </form>
