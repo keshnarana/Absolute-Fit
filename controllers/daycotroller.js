@@ -1,9 +1,9 @@
 const db = require("../models")
 module.exports = {
 
-      //Day Controller
-      createDay: function(req, res) {
-        db.Day.findOne({date: req.body.date, userId: req.body.userId, weight: req.body.weight,height: req.body.height })
+    //Day Controller
+    createDay: function(req, res) {
+        db.Day.findOne({date: req.body.date, userId: req.body.userId, weight: req.body.weight, height: req.body.height})
         .then(dbDay => {
             if (dbDay) {
                 return res.json(dbDay)
@@ -58,24 +58,14 @@ module.exports = {
     findDayByuserId: function(req, res) {
         db.Day
         .find({userId: req.params.userId}, null, {sort: {date: -1}, limit: 7} )
-        .populate("exercises, foods")
+        .populate("exercises")
         .then(dbDays => {
             return res.json(dbDays)
         })
         .catch(err => res.status(422).json(err));
     },
 
-    /*findDayFoodByuserId: function(req, res) {
-        db.Day
-        .find({userId: req.params.userId}, null, {sort: {date: -1}, limit: 7} )
-        .populate("foods")
-        .then(dbDays => {
-            return res.json(dbDays)
-        })
-        .catch(err => res.status(422).json(err));
-
-    },*/
-   findDayWeightByuserId: function(req, res) {
+    findDayWeightByuserId: function(req, res) {
         db.Day
         .find({userId: req.params.userId}, null, {sort: {date: -1}, limit: 30} ) 
         .then(dbDays => {

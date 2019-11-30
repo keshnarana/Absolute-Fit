@@ -1,4 +1,3 @@
-
 /**
  * Welcome to your Workbox-powered service worker!
  *
@@ -15,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.bc4266537102ebbad54499389d0999ad.js"
+  "/precache-manifest.49145cccf64a0da2aa1da7c863b9976e.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -38,4 +37,3 @@ workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/i
   
   blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
 });
-
