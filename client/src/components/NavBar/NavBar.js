@@ -81,14 +81,14 @@ class Navbar extends React.Component {
             </ListItem>
           </a>
 
-          <a
+          {/* <a
             style={{ textDecoration: 'none', color: 'white' }}
             href="/food"
           >
             <ListItem button>
               <ListItemText primary="Food" />
             </ListItem>
-          </a>
+          </a> */}
           <a style={{ textDecoration: 'none', color: 'white' }} href="/weight">
             <ListItem button>
               <ListItemText primary="Bmi" />

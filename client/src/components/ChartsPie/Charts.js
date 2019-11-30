@@ -14,12 +14,12 @@ class Chart extends Component {
                data: [
                    this.props.exerciseChart,
                    this.props.nutritionChart,
-                   this.props.foodChart,
+                  
                ],
                 backgroundColor: [
                   '#825eb9b5',
                   '#ffe082',
-                   '#f48fb1',
+                  
                    
                ],
            }],

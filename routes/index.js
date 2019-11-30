@@ -34,12 +34,12 @@ router.post('/send', (req, res, next) => {
   var name = req.body.name
   var email = req.body.email
   var message = req.body.message
-  var content = `name: ${name} \n email: ${email} \n message: ${message} `
+  var content = ` name: ${name} \n email: ${email} \n message: ${message} `
 
   var mail = {
     from: name,
     to: 'keshnanrana@gmail.com',  //Change to email address that you want to receive messages on
-    subject: 'New Message from AbsoluteFit',
+    subject: 'New Message from '+ email +'.' ,
     text: content
   }
 

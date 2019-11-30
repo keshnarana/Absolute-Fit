@@ -1,4 +1,5 @@
+require('dotenv').config()
 module.exports = {
-    secret: 'absolutefitApp'
+    secret: process.env.SECRET
   };
   

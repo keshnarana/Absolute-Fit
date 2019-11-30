@@ -57,7 +57,7 @@ catch(err){
 // catch(err){
 //   return next(err);
 // }
-//  }
+//  }s
 // );
 // Gets all the user data for a given userId
 router.get('/user/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
