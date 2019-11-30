@@ -1,3 +1,4 @@
+
 /**
  * Welcome to your Workbox-powered service worker!
  *
@@ -37,3 +38,4 @@ workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/i
   
   blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
 });
+
