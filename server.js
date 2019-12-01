@@ -27,7 +27,7 @@ app.get("*", (req, res) => {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || process.env.K,
+   process.env.K,
   { useNewUrlParser: true,useUnifiedTopology: true }
 );
 
