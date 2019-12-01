@@ -1,5 +1,5 @@
 require('dotenv').config()
 module.exports = {
-    USER: 'keshnanrana@gmail.com', 
-    PASS: 'Dream123!'
+    USER: process.env.EMAIL, 
+    PASS: process.env.PAS
 }
