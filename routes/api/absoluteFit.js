@@ -126,7 +126,8 @@ router.get('/getDays/:userId', passport.authenticate('jwt', { session: false }),
   const token = getToken(req.headers);
   if (token) {
     console.log('user is loggd in to the get route for day:id');
-    db.Day.findDayByuserId(req,res)
+    db.Day.findDayByuserId(req,res);
+    db.Day.findDay(req,res);
   } else {
     return res.status(403).send({ success: false, msg: 'Unauthorized.' });
   }
