@@ -93,7 +93,7 @@ const styles = theme => ({
 
 class FoodC extends React.Component {
   renderTableRows(arr) {
-    return (
+       return (
       arr.map((element,i) => {
         return (
           <TableRow key={i}>

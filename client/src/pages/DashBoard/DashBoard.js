@@ -87,9 +87,7 @@ class DashBoard extends Component {
           .post('/api/absoluteFit/newDay', {
             userId: this.state.userId,
             weight: this.state.currentWeight,
-            
             height: this.state.currentHeight,
-
             date: moment().format('MM.DD.YYYY')
           })
           .then(res => {
