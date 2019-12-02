@@ -13,7 +13,6 @@ class DashBoard extends Component {
     redirect: false,
     nutritionPoints: 0,
     exerciseMins: 0,
-    foodcalories: 0,
     currentWeight: 0,
     currentHeight: 0,
     currentDate: ''
@@ -27,19 +26,6 @@ class DashBoard extends Component {
 
     if (totalMinutes) {
       return totalMinutes;
-    } else {
-      return 0;
-    }
-  }
-
-  totalFoodKals(arr) {
-    let totalKals = 0;
-    for (let i = 0; i < arr.length; i++) {
-      totalKals = totalKals + arr[i].calories;
-    }
-
-    if (totalKals) {
-      return totalKals;
     } else {
       return 0;
     }
@@ -70,7 +56,6 @@ class DashBoard extends Component {
           lastName: user.lastName,
           nutritionPoints: res.data.days[0].nutrition,
           exerciseMins: res.data.days[0].totalActivity,
-          foodcalories: res.data.days[0].totalCalCount,
           currentDayId: res.data.days[0].id,
           currentWeight: res.data.days[0].weight,
           currentHeight: res.data.days[0].height
@@ -108,12 +93,10 @@ class DashBoard extends Component {
       <div>
         {this.renderRedirect()}
         <DashBoardComponent
-        
           nutrition={this.state.nutritionPoints}
           weight={this.state.currentWeight}
           height={this.state.currentHeight}
           exercise={this.state.exerciseMins}
-          food={this.state.foodcalories}
           firstName={this.state.firstName}
           lastName={this.state.lastName}
         />

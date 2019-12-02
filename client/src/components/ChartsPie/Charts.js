@@ -7,19 +7,21 @@ class Chart extends Component {
      renderChart() {
          let chartData = {
 
-           labels: ['Exercise', 'Nutrition' ,'Food'],
+
+           labels: ['Exercise', 'Nutrition' ],
+
    
            datasets:[{
                strokeColor: "rgba(100, 190, 154, 1)",
                data: [
                    this.props.exerciseChart,
                    this.props.nutritionChart,
-                   this.props.foodChart,
+                  
                ],
                 backgroundColor: [
                   '#825eb9b5',
                   '#ffe082',
-                   '#f48fb1',
+                  
                    
                ],
            }],

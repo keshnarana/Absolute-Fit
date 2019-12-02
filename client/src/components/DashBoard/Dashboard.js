@@ -177,7 +177,7 @@ class Dashboard extends React.Component {
                         </Tooltip>
                       </TableCell>
                     </TableRow>
-                    <TableRow>
+                    {/* <TableRow>
                       <TableCell className={classes.tableCellStyle}  >
                         Food (Calories)
                       </TableCell>
@@ -203,7 +203,7 @@ class Dashboard extends React.Component {
 
                         </Tooltip>
                       </TableCell>
-                    </TableRow>
+                    </TableRow> */}
 
                     <TableRow>
                       <TableCell className={classes.tableCellStyle} >

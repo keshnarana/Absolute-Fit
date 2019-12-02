@@ -1,38 +1,25 @@
 const db = require("../models")
 module.exports = {
 
-   //Day Controller
-   createDay: function(req, res) {
-    db.Day.findOne({date: req.body.date, userId: req.body.userId, weight: req.body.weight})
-    .then(dbDay => {
-        if (dbDay) {
-            return res.json(dbDay)
-        } else {
-            db.Day.create(req.body)
-            .then(newDbDay => {
-                db.User.findById({_id: req.body.userId})
-                .then(dbUser => {
-                    dbUser.days.push(newDbDay._id)
-                    dbUser.save()
-                })
-                return res.json(newDbDay)
-                .catch(error => {
-                    return res.status(400).json({
-                        error,
-                        message: 'error!',
+    //Day Controller
+    createDay: function(req, res) {
+        db.Day.findOne({date: req.body.date, userId: req.body.userId, weight: req.body.weight, height: req.body.height})
+        .then(dbDay => {
+            if (dbDay) {
+                return res.json(dbDay)
+            } else {
+                db.Day.create(req.body)
+                .then(newDbDay => {
+                    db.User.findById({_id: req.body.userId})
+                    .then(dbUser => {
+                        dbUser.days.push(newDbDay._id)
+                        dbUser.save()
                     })
+                    return res.json(newDbDay)
                 })
-            })
-            .catch(error => {
-                return res.status(400).json({
-                    error,
-                    message: 'error!',
-                })
-            })
-          
-        }
-    })
-},
+            }
+        })
+    },
 
     updateWeight: function(req, res) {
         db.Day
@@ -71,7 +58,11 @@ module.exports = {
     findDayByuserId: function(req, res) {
         db.Day
         .find({userId: req.params.userId}, null, {sort: {date: -1}, limit: 7} )
+<<<<<<< HEAD
         .populate("exercises", "foods")
+=======
+        .populate("exercises")
+>>>>>>> 7c7f8cce1159b6871388d8d2d1504126c083fb7b
         .then(dbDays => {
           // console.log(dbdays)
             return res.json(dbDays)
@@ -79,17 +70,7 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
 
-    /*findDayFoodByuserId: function(req, res) {
-        db.Day
-        .find({userId: req.params.userId}, null, {sort: {date: -1}, limit: 7} )
-        .populate("foods")
-        .then(dbDays => {
-            return res.json(dbDays)
-        })
-        .catch(err => res.status(422).json(err));
-
-    },*/
-   findDayWeightByuserId: function(req, res) {
+    findDayWeightByuserId: function(req, res) {
         db.Day
         .find({userId: req.params.userId}, null, {sort: {date: -1}, limit: 30} ) 
         .then(dbDays => {
