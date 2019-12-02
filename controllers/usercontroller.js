@@ -19,6 +19,13 @@ module.exports = {
                 path: "exercises",
                 model: "Exercise",
                 select: "-__v"
+            },
+
+            select: "-__v",
+            populate: {
+                path: "foods",
+                model: "Food",
+                select: "-__v"
             }
 
 

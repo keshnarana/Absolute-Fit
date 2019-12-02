@@ -1,1 +1,1 @@
-// export { default } from "./FoodPage";
+export { default } from "./FoodPage";
