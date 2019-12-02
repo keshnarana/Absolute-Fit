@@ -35,27 +35,28 @@ class Food extends Component {
         foodQuantities.push(data[i].totalCalCount)
         datesArr.push(moment(data[i].date).format("MM/DD/YYYY"))
       }
-
+     // console.log(data[0].foods, "look food")
       this.setState({
         currentDayId: data[0]._id,
         dailyTotal: data[0].totalCalCount,
-        todaysCalCount: data[0].foods,
+        todaysCalCount: data[0].food,
         quantities: foodQuantities,
         dates: datesArr
       })
     })
     .catch(err => {console.log(err)})
-
+   // console.log(this.state.todaysCalCount, "look")
   }
 
   handleCaloriesCount(e) {
-    this.setState({ newCalories: parseInt(e.target.value,100) }, () => {
+  //  console.log(e.target.value)
+    this.setState({ newCalories: parseInt(e.target.value )}, () => {
       console.log(this.state.newCalories)
     });
   }
 
   handleFoodItems(e) {
-    this.setState({newFood: e.target.value }, () => {
+    this.setState({newFood: e.target.value}, () => {
       console.log(this.state.newFood)
     })
   }
@@ -67,7 +68,7 @@ class Food extends Component {
       dailyTotal: this.state.dailyTotal + this.state.newCalories,
       todaysCalCount: newCals
     }, () => {
-
+     
       axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
       axios.post('/api/absoluteFit/newFood', {
         food: this.state.newFood,
@@ -90,6 +91,7 @@ class Food extends Component {
   };
 
   render() {
+    //console.log(this.state.todaysCalCount, "look here")
     return (
       <div>
         {this.renderRedirect()}

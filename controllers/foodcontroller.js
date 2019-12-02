@@ -8,7 +8,7 @@ module.exports = {
         .then(foodModel => {
             db.Day.findById({_id: req.body.currentDayId})
             .then(dayModel => {
-                dayModel.foods.push(foodModel._id)
+                dayModel.food.push(foodModel._id)
                 dayModel.totalCalCount = req.body.totalCalCount
                 dayModel.save()
                 return res.status(200)

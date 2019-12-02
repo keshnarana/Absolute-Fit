@@ -19,6 +19,13 @@ module.exports = {
                 path: "exercises",
                 model: "Exercise",
                 select: "-__v"
+            },
+
+            select: "-__v",
+            populate: {
+                path: "foods",
+                model: "Food",
+                select: "-__v"
             }
 
 
@@ -53,12 +60,6 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
 */
-
-
-
-
-
-
 
     createUser: function(req, res) {
         db.User

@@ -44,21 +44,21 @@ catch(err){
  }
 );
 // Adds Food to the given day, !! 
-// router.post('/newFood', passport.authenticate('jwt', { session: false }), (req, res) => {
-//   try{
-//     const token = getToken(req.headers);
-//   if (token) {
-//     console.log('user is loggd in to the post route for NewFood');
-//     db.Food.addFoodItems(req, res);
-//   } else {
-//     return res.status(403).send({ success: false, msg: 'Unauthorized.' });
-//   }
-// }
-// catch(err){
-//   return next(err);
-// }
-//  }s
-// );
+router.post('/newFood', passport.authenticate('jwt', { session: false }), (req, res) => {
+  try{
+    const token = getToken(req.headers);
+  if (token) {
+    console.log('user is loggd in to the post route for NewFood');
+    db.Food.addFoodItems(req, res);
+  } else {
+    return res.status(403).send({ success: false, msg: 'Unauthorized.' });
+  }
+}
+catch(err){
+  return next(err);
+}
+ }
+);
 // Gets all the user data for a given userId
 router.get('/user/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
   const token = getToken(req.headers);
