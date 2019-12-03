@@ -11,11 +11,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
 
 
 
@@ -92,18 +87,7 @@ const styles = theme => ({
 });
 
 class FoodC extends React.Component {
-  renderTableRows(arr) {
-       return (
-      arr.map((element,i) => {
-        return (
-          <TableRow key={i}>
-            <TableCell >{element.food}</TableCell>
-            <TableCell >{element.calories} Calories</TableCell>
-          </TableRow>
-        )
-      })
-    )
-  }
+
 
   render() {
     const { classes } = this.props;
@@ -202,20 +186,81 @@ class FoodC extends React.Component {
           <Grid item xs={12} md={6}>
             <Paper className={classes.root} elevation={1} id="FoodCard">
               <Typography variant="display1" className={classes.heading} align="center">
-                Today
+              BMR - Mifflin st Jeor formula 
+              <Typography className={classes.info} align="center">
+              <p>This calculator shows approximate calories required per day to maintain weight if you are moderatetely active (moderate exercise/sports 3-5 days/week)</p>
+            
+                
+              </Typography>
+              <div className="form-group">
+              <form> 
+             <TextField
+                  
+                  id="uHeight"
+                  label="Enter Height"
+                  fullWidth
+                  // value={this.props.weight}
+                  onChange={this.props.handleChangeh}
+                  type="number"
+                  className={classes.textField}
+                  margin="normal"
+                  value={this.props.uHeight}
+                />
+                 <TextField
+                  
+                  id="uWeight"
+                  label="Enter weight"
+                  fullWidth
+                  // value={this.props.weight}
+                  onChange={this.props.handleChangeh}
+                  type="number"
+                  className={classes.textField}
+                  margin="normal"
+                  value={this.props.uWeight}
+                />
+                 <TextField
+                  
+                  id="uAge"
+                  label="Enter age"
+                  fullWidth
+                  // value={this.props.weight}
+                  onChange={this.props.handleChangeh}
+                  type="number"
+                  className={classes.textField}
+                  margin="normal"
+                  value={this.props.uAge}
+                />
+                 <TextField
+                  
+                  id="gender"
+                  label="Enter gender"
+                  fullWidth
+                  // value={this.props.weight}
+                  onChange={this.props.handleChangeh}
+                  type="text"
+                  className={classes.textField}
+                  margin="normal"
+                  value={this.props.gender}
+                />
+               
+              </form>
+                    		<div className="col-sm-10">
+                    		<div>
+              
+                        <Typography className={classes.info}>
+                        {this.props.bmr}<br></br>
+                          {this.props.rLow}<br></br>
+                {this.props.rM}<br></br>
+                {this.props.rHigh} </Typography>
+            </div>	</div>
+                    	</div>
+                    	<div className="form-group">
+                    		<div className="col-sm-offset-2 col-sm-10">
+                    			<Button type="button" variant="contained"  onClick={this.props.calculateBMR} className={classes.buttonStyle}>Calculate BMR</Button>
+                    		</div>
+                    	</div>
               </Typography>
 
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Foods</TableCell>
-                    <TableCell>Calories</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {this.renderTableRows(this.props.todaysCalCount)}
-                </TableBody>
-              </Table>
             </Paper>
           </Grid>
          

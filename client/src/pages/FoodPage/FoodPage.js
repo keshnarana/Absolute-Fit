@@ -13,7 +13,18 @@ class Food extends Component {
     dailyTotal: 0,
     todaysCalCount: [],
     quantities: [],
-    dates: []
+    dates: [],
+  male:0,
+  female:0,
+    rM:0,
+    rLow:0,
+    rHigh:0,
+    uHeight:0,
+    uWeight:0,
+    uAge:0,
+    gender:"",
+    
+    bmr:0
   };
 
   componentDidMount() {
@@ -47,6 +58,46 @@ class Food extends Component {
     .catch(err => {console.log(err)})
    // console.log(this.state.todaysCalCount, "look")
   }
+ 
+  handleChangeh(e) {
+
+    this.setState({[e.target.id]: e.target.value});
+    
+  }
+ 
+   // To calculate BMI
+   calculateBMR(e) {
+    let {uHeight, uWeight, uAge, gender} = this.state;
+    //height in cm, weight in kg
+    //BMI=(w/(h*h))*10000
+    
+let male = ( (10 * uWeight + (6.25 *  uHeight))- (5 * uAge) + 5)
+let female = ((10 * uWeight + (6.25 * uHeight))-(5 * uAge)-161)
+
+    if ( gender === 'male' ) {
+      let rM = (male * 1.55).toFixed(1);
+      let rLow= (male * 1.2).toFixed(1);
+      let rHigh= (male * 1.725).toFixed(1);
+      this.setState({bmr: "BMR "+ male})
+      this.setState({rLow: rLow +" calories per day. If you are sedentary (little or no exercise)"});
+      this.setState({rM: rM +" calories per day. If you are moderatetely active (moderate exercise/sports 3-5 days/week)"});
+      this.setState({rHigh: rHigh +" calories per day. If you are very active (hard exercise/sports 6-7 days a week)"});
+    } else if ( gender === 'female') {
+      let rM =  (female * 1.55).toFixed(1);
+      let rLow= (female * 1.2).toFixed(1);
+      let rHigh= (female *1.725).toFixed(1);
+      this.setState({bmr: "BMR "+ female})
+      this.setState({rLow: rLow +" calories per day. If you are sedentary (little or no exercise) "});
+      this.setState({rM: rM +" calories per day. If you are moderatetely active (moderate exercise/sports 3-5 days/week)"});
+      this.setState({rHigh: rHigh +" calories per day. If you are very active (hard exercise/sports 6-7 days a week)"});
+    } 
+    else {
+      this.setState({rM: 'No input'});
+      this.setState({rLow: 'No input'});
+      this.setState({rHigh: 'No input'});
+  }
+}
+ 
 
   handleCaloriesCount(e) {
   //  console.log(e.target.value)
@@ -104,6 +155,16 @@ class Food extends Component {
           handleFoodItems={this.handleFoodItems.bind(this)}
           handleCaloriesCount={this.handleCaloriesCount.bind(this)}
           food={this.state.newFood}
+          handleChangeh={this.handleChangeh.bind(this)}
+          calculateBMR = {this.calculateBMR.bind(this)}
+          bmr={this.state.bmr}
+          rM={this.state.rM}
+          rLow={this.state.rLow}
+          rHigh={this.state.rHigh}
+          uWeight={this.state.uWeight}
+          uHeight={this.state.uHeight}
+          uAge={this.state.uAge}
+          gender={this.state.gender}
         />
       </div>
     );
