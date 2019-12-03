@@ -1,4 +1,4 @@
 module.exports = {
-    secret: 'absolutefitApp'
+    secret: process.env.SECRET
   };
   

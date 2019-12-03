@@ -19,7 +19,7 @@ class Chart extends Component {
                 backgroundColor: [
                   '#825eb9b5',
                   '#ffe082',
-                   '#f48fb1',
+                   '#7984c0',
                    
                ],
            }],
