@@ -39,7 +39,7 @@ class Nutrition extends Component {
 
   componentDidMount() {
     let savedDate = localStorage.getItem('date')
-    if (moment().format("MM/DD/YYYY") !== savedDate ) {
+    if (moment().utc().format("MM/DD/YYYY") !== savedDate ) {
       localStorage.setItem('toggled', JSON.stringify(this.state.toggled))
     }
     this.setState(
@@ -71,7 +71,7 @@ class Nutrition extends Component {
 
       for (let i = data.length - 1; i > -1; i--) {
         nutritionQuantities.push(data[i].nutrition);
-        datesArr.push(moment(data[i].date).format("MM/DD/YYYY"))
+        datesArr.push(moment(data[i].date).utc().format("MM/DD/YYYY"))
       }
 
       this.setState({

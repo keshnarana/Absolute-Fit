@@ -33,7 +33,7 @@ class Exercise extends Component {
 
       for (let i = data.length - 1; i > -1; i --) {
         exerciseQuantities.push(data[i].totalActivity)
-        datesArr.push(moment(data[i].date).format("MM/DD/YYYY"))
+        datesArr.push(moment(data[i].date).utc().format("MM/DD/YYYY"))
       }
 
       this.setState({

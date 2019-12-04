@@ -44,7 +44,7 @@ class Food extends Component {
 
       for (let i = data.length - 1; i > -1; i --) {
         foodQuantities.push(data[i].totalCalCount)
-        datesArr.push(moment(data[i].date).format("MM/DD/YYYY"))
+        datesArr.push(moment(data[i].date).utc().format("MM/DD/YYYY"))
       }
      // console.log(data[0].foods, "look food")
       this.setState({
