@@ -57,7 +57,7 @@ class DashBoard extends Component {
     axios.get(url).then(res => {
       let user = res.data;
       let mostRecentDate = moment()
-        .add(1, 'days')
+        .add(-1, 'days')
         .format('MM.DD.YYYY');
 
       if (user.days.length) {
