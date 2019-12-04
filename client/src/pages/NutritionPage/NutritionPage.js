@@ -14,7 +14,7 @@ class Nutrition extends Component {
     updatedNutrition: 0,
     quantities: [],
     dates: [],
-    date: moment().tz('America/New_York').format("MM/DD/YYYY"),
+    date: moment().utc().format("MM/DD/YYYY"),
     toggled: {
       healthyFat: false,
       proteinBreakfast: false,
@@ -93,7 +93,7 @@ class Nutrition extends Component {
       },
       () => {
         localStorage.setItem('toggled', JSON.stringify(this.state.toggled));
-        localStorage.setItem('date', moment().tz('America/New_York').format("MM/DD/YYYY") )
+        localStorage.setItem('date', moment().utc().format("MM/DD/YYYY") )
       }
     );
   };
