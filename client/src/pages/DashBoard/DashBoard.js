@@ -61,7 +61,7 @@ class DashBoard extends Component {
         .format('MM.DD.YYYY');
 
       if (user.days.length) {
-        mostRecentDate = moment(user.days[0].date).format('MM.DD.YYYY');
+        mostRecentDate = moment(user.days[0].date).utc().format('MM.DD.YYYY');
       }
 
       if (mostRecentDate === todaysDate) {

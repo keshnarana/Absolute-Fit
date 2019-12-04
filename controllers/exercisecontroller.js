@@ -1,5 +1,5 @@
 const db = require("../models")
-
+const moment = require("moment")
 module.exports = {
     //Exercise Controllers
     addExercise: function(req, res) {

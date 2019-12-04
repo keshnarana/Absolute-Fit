@@ -38,7 +38,6 @@
   "proxy": "http://localhost:3001",
   "root": "build/",
   "clean_urls": false,
-  
   "browserslist": {
     "production": [
       ">0.2%",
