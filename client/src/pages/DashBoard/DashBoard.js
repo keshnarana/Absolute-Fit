@@ -47,7 +47,7 @@ class DashBoard extends Component {
 
   componentDidMount() {
     this.setState({ userId: localStorage.getItem('userId') });
-    let todaysDate = moment().format('MM.DD.YYYY');
+    let todaysDate = moment().tz('America/New_York').format('MM.DD.YYYY');
 
     let url = `/api/absoluteFit/user/${localStorage.getItem('userId')}`;
     axios.defaults.headers.common['Authorization'] = localStorage.getItem(
@@ -56,7 +56,7 @@ class DashBoard extends Component {
 
     axios.get(url).then(res => {
       let user = res.data;
-      let mostRecentDate = moment()
+      let mostRecentDate = moment().tz('America/New_York')
         .add(-1, 'days')
         .format('MM.DD.YYYY');
 
