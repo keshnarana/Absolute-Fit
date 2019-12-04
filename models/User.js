@@ -10,7 +10,7 @@ const UserSchema = new Schema({
   weight: { type: Number, required: false },
   height: { type: Number, required: false },
   days: [{ type: Schema.Types.ObjectId, ref: 'Day' }],
-  date: { type: Date, default: Date.now }
+
 });
 
 UserSchema.pre('save', function(next) {
