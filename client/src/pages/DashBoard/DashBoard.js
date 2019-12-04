@@ -88,7 +88,7 @@ class DashBoard extends Component {
             userId: this.state.userId,
             weight: this.state.currentWeight,
             height: this.state.currentHeight,
-            date: moment().format('MM.DD.YYYY')
+            date: moment().tz('America/New_York').format('MM.DD.YYYY')
           })
           .then(res => {
             this.setState({ currentDayId: res.data._id });
