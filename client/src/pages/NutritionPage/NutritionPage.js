@@ -51,7 +51,7 @@ class Nutrition extends Component {
       () =>
         this.setState({
           progress: Object.keys(this.state.toggled).reduce(
-            (count, key) => (this.state.toggled[key] ? count + 1 : count),
+            (count, key) => (this.state.toggled[key] ? count + 10 : count),
             0
           )
         })
@@ -136,11 +136,11 @@ class Nutrition extends Component {
     if (isChecked) {
       this.setState({
         progress:
-          typeof this.state.progress === 'string' ? 0 : this.state.progress + 1
+          typeof this.state.progress === 'string' ? 0 : this.state.progress + 10
       });
       localStorage.setItem(value, true);
     } else {
-      this.setState({ progress: this.state.progress - 1 });
+      this.setState({ progress: this.state.progress - 10 });
       localStorage.setItem(value, false);
     }
   };
