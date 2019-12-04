@@ -40,7 +40,7 @@ class WeightP extends Component {
       for (let i = data.length - 1; i > -1; i--) {
         weightQuantities.push(data[i].weight);
         
-        datesArr.push(moment(data[i].date).format('MM/DD/YYYY'));
+        datesArr.push(moment(data[i].date).utc().format('MM/DD/YYYY'));
       }
 
      
