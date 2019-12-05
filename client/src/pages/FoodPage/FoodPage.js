@@ -17,15 +17,15 @@ class Food extends Component {
     dates: [],
   male:0,
   female:0,
-    rM:0,
-    rLow:0,
-    rHigh:0,
+    rM:"",
+    rLow:"",
+    rHigh:"",
     uHeight:0,
     uWeight:0,
     uAge:0,
     gender:"",
     
-    bmr:0
+    bmr:""
   };
 
   componentDidMount() {

@@ -161,7 +161,7 @@ class FoodC extends React.Component {
                   >
                     <TextField
                       id="addKals"
-                      label="Enter Kals"
+                      label="Enter Cals"
                       value={this.props.kals}
                       onChange={this.props.handleCaloriesCount}
                       type="number"
@@ -186,9 +186,9 @@ class FoodC extends React.Component {
           <Grid item xs={12} md={6}>
             <Paper className={classes.root} elevation={1} id="FoodCard">
               <Typography variant="display1" className={classes.heading} align="center">
-              BMR - Mifflin st Jeor formula 
+              Basal Metabolic Rate  
               <Typography className={classes.info} align="center">
-              <p>This calculator shows approximate calories required per day to maintain weight if you are moderatetely active (moderate exercise/sports 3-5 days/week)</p>
+              <p>This calculator shows approximate calories required per day to maintain weight using Mifflin st Jeor formula</p>
             
                 
               </Typography>
@@ -197,7 +197,7 @@ class FoodC extends React.Component {
              <TextField
                   
                   id="uHeight"
-                  label="Enter Height"
+                  label="Enter Height(cm)"
                   fullWidth
                   // value={this.props.weight}
                   onChange={this.props.handleChangeh}
@@ -209,7 +209,7 @@ class FoodC extends React.Component {
                  <TextField
                   
                   id="uWeight"
-                  label="Enter weight"
+                  label="Enter weight(kg)"
                   fullWidth
                   // value={this.props.weight}
                   onChange={this.props.handleChangeh}
@@ -221,7 +221,7 @@ class FoodC extends React.Component {
                  <TextField
                   
                   id="uAge"
-                  label="Enter age"
+                  label="Enter age(Y)"
                   fullWidth
                   // value={this.props.weight}
                   onChange={this.props.handleChangeh}
@@ -233,7 +233,7 @@ class FoodC extends React.Component {
                  <TextField
                   
                   id="gender"
-                  label="Enter gender"
+                  label="Enter gender(male/female)"
                   fullWidth
                   // value={this.props.weight}
                   onChange={this.props.handleChangeh}
