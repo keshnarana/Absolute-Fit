@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 const path = require('path');
 const app = express();
-const moment = require("moment")
+
+const moment = require("moment-timezone")
 const PORT = process.env.PORT || 3001;
 
 

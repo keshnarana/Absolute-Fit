@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import NutritionC from '../../components/NutritionC';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import moment from "moment"
 
+import moment from 'moment-timezone';
 class Nutrition extends Component {
   state = {
     token: localStorage.getItem('jwtToken'),
@@ -14,7 +14,7 @@ class Nutrition extends Component {
     updatedNutrition: 0,
     quantities: [],
     dates: [],
-    date: moment().utc().format("MM/DD/YYYY"),
+    date: moment().tz("America/New_York").format("MM/DD/YYYY"),
     toggled: {
       healthyFat: false,
       proteinBreakfast: false,
@@ -39,7 +39,7 @@ class Nutrition extends Component {
 
   componentDidMount() {
     let savedDate = localStorage.getItem('date')
-    if (moment().utc().format("MM/DD/YYYY") !== savedDate ) {
+    if (moment().tz("America/New_York").format("MM/DD/YYYY") !== savedDate ) {
       localStorage.setItem('toggled', JSON.stringify(this.state.toggled))
     }
     this.setState(
@@ -71,7 +71,7 @@ class Nutrition extends Component {
 
       for (let i = data.length - 1; i > -1; i--) {
         nutritionQuantities.push(data[i].nutrition);
-        datesArr.push(moment(data[i].date).utc().format("MM/DD/YYYY"))
+        datesArr.push(moment(data[i].date).tz("America/New_York").format("MM/DD/YYYY"))
       }
 
       this.setState({
@@ -93,7 +93,7 @@ class Nutrition extends Component {
       },
       () => {
         localStorage.setItem('toggled', JSON.stringify(this.state.toggled));
-        localStorage.setItem('date', moment().utc().format("MM/DD/YYYY") )
+        localStorage.setItem('date', moment().tz("America/New_York").format("MM/DD/YYYY") )
       }
     );
   };

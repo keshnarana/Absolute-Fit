@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Weight from '../../components/Weight';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import moment from 'moment';
+
+import moment from 'moment-timezone';
 
 class WeightP extends Component {
   state = {
@@ -40,7 +41,7 @@ class WeightP extends Component {
       for (let i = data.length - 1; i > -1; i--) {
         weightQuantities.push(data[i].weight);
         
-        datesArr.push(moment(data[i].date).utc().format('MM/DD/YYYY'));
+        datesArr.push(moment(data[i].date).tz("America/New_York").format('MM/DD/YYYY'));
       }
 
      

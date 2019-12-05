@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import DashBoardComponent from '../../components/DashBoard';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import moment from 'moment';
+
+import moment from 'moment-timezone';
 
 class DashBoard extends Component {
   state = {
@@ -47,7 +48,7 @@ class DashBoard extends Component {
 
   componentDidMount() {
     this.setState({ userId: localStorage.getItem('userId') });
-    let todaysDate = moment().utc().format('MM.DD.YYYY');
+    let todaysDate = moment().tz("America/New_York").format('MM.DD.YYYY');
 
     let url = `/api/absoluteFit/user/${localStorage.getItem('userId')}`;
     axios.defaults.headers.common['Authorization'] = localStorage.getItem(
@@ -56,12 +57,12 @@ class DashBoard extends Component {
 
     axios.get(url).then(res => {
       let user = res.data;
-      let mostRecentDate = moment().utc()
+      let mostRecentDate = moment().tz("America/New_York")
         .add(-1, 'days')
         .format('MM.DD.YYYY');
 
       if (user.days.length) {
-        mostRecentDate = moment(user.days[0].date).utc().format('MM.DD.YYYY');
+        mostRecentDate = moment(user.days[0].date).tz("America/New_York").format('MM.DD.YYYY');
       }
 
       if (mostRecentDate === todaysDate) {
@@ -88,7 +89,7 @@ class DashBoard extends Component {
             userId: this.state.userId,
             weight: this.state.currentWeight,
             height: this.state.currentHeight,
-            date: moment().utc().format('MM.DD.YYYY')
+            date: moment().tz("America/New_York").format('MM.DD.YYYY')
           })
           .then(res => {
             this.setState({ currentDayId: res.data._id });

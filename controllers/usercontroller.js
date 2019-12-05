@@ -1,6 +1,6 @@
 const db = require("../models")
-const moment = require("moment")
 
+const moment = require("moment-timezone")
 
 module.exports = {
     // User controllers

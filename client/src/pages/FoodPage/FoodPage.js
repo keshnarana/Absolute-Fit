@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import FoodC from '../../components/FoodC';
 import { Redirect } from 'react-router-dom';
-import moment from "moment"
+
+import moment from 'moment-timezone';
 import axios from "axios"
 
 class Food extends Component {
@@ -44,7 +45,7 @@ class Food extends Component {
 
       for (let i = data.length - 1; i > -1; i --) {
         foodQuantities.push(data[i].totalCalCount)
-        datesArr.push(moment(data[i].date).utc().format("MM/DD/YYYY"))
+        datesArr.push(moment(data[i].date).tz("America/New_York").format("MM/DD/YYYY"))
       }
      // console.log(data[0].foods, "look food")
       this.setState({
