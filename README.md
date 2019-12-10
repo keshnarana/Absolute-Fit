@@ -21,7 +21,7 @@ WORKING
 
 * click on new user and create a new user
 * login with the user information
-![]()
+![](Screenshot%20(40).png)
 * navigate to different pages
 * live healthy !
 
