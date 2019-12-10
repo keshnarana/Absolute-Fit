@@ -7,14 +7,14 @@ Absolute Fit App is a wellness tracking app for monitoring and tracking fitness-
 
 TECHNOLOGIES USED
 
-ReactJS, Node and Express Web Server,
-MongoDB with Mongoose,
-Authentication using Passport / JWT with Bcrypt –Nodejs,
-Sensitive information protected and secured,
-Material UI – CSS library,
-Moment ,
-SMTP NodeMailer,
-Heroku,
+ReactJS, Node and Express Web Server,<br>
+MongoDB with Mongoose,<br>
+Authentication using Passport / JWT with Bcrypt –Nodejs,<br>
+Sensitive information protected and secured,<br>
+Material UI – CSS library,<br>
+Moment ,<br>
+SMTP NodeMailer,<br>
+Heroku,<br>
 React-chartjs-2
 
 WORKING
