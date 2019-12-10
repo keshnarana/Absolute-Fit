@@ -20,18 +20,24 @@ React-chartjs-2
 WORKING
 
 * click on new user and create a new user
+
 * login with the user information
-![](Screenshot%20(42).png)
-* navigate to different pages
+
 ![](Screenshot%20(41).png)
+
+* navigate to different pages
+
+![](Screenshot%20(42).png)
+
 * live healthy !
+
 ![](Screenshot%20(40).png)
 
 AUTHORS
 
-Amal Hussein, 
-Keshna Rana, 
-Saumay Wijesuriya,
+Amal Hussein, <br>
+Keshna Rana, <br>
+Saumay Wijesuriya,<br>
 Prashanti Pasupuleti
 
 
