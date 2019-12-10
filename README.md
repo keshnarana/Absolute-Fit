@@ -17,6 +17,13 @@ SMTP NodeMailer,
 Heroku,
 React-chartjs-2
 
+WORKING
+
+* click on new user and create a new user
+* login with the user information
+![]()
+* navigate to different pages
+* live healthy !
 
 AUTHORS
 
