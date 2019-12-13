@@ -5,7 +5,8 @@ Our trello : https://trello.com/b/gpRzoHOK/absolute-fit
 
 ABOUT
 
-Absolute Fit App is a wellness tracking app for monitoring and tracking fitness-related metrics such as daily food consumption level, exercise duration, and nutrition points. In addition to that, this app will help users to know their health status by calculating their BMI and BMR.
+Absolute Fit App is a responsive wellness tracking app for monitoring and tracking fitness-related metrics such as daily food consumption level, exercise duration, and nutrition points. In addition to that, this app will help users to know their health status by calculating their BMI and BMR.
+
 
 TECHNOLOGIES USED
 
