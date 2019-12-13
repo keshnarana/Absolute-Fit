@@ -1,6 +1,7 @@
 # Absolute-Fit
 
 Our website : https://absoluteapp.herokuapp.com/
+Our trello : https://trello.com/b/gpRzoHOK/absolute-fit
 
 ABOUT
 
