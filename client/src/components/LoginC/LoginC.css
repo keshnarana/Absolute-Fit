@@ -4,16 +4,15 @@ a, button {
 }
 
 
-div.MuiGrid-container-164 {
-}
 
-@media (min-width: 600px) {
+@media (min-width: 400px) {
 	div.Login-root-128 {
     margin: 5% 4% 0% 4%;
     text-align: center;
     padding-top: 25px;
     padding-left: 25px;
     padding-right: 25px;
+    background-color: rgba(10,45,89, 0.4);
     padding-bottom: 25px;
 }
 

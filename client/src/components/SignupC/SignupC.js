@@ -13,10 +13,10 @@ const styles = theme => ({
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
     backgroundColor: 'rgba(10,45,89, 0.4)',
-    width: '700px',
-    height: '400px',
+    width: '50%',
+    height: 'auto',
     margin: 'auto',
-    marginTop: '20px',
+    marginTop: '4%',
   },
   button: {
     
@@ -72,7 +72,7 @@ class Signup extends React.Component {
             <Grid item xs={12} sm={3}>
               <TextField
                 name="height"
-                label="height-cm (optional)"
+                label="Height-cm "
                 className={classes.textField}
                 margin="normal"
                 fullWidth
@@ -82,7 +82,7 @@ class Signup extends React.Component {
             <Grid item xs={12} sm={3}>
               <TextField
                 name="weight"
-                label="Weight-kg (optional)"
+                label="Weight-kg"
                 className={classes.textField}
                 margin="normal"
                 fullWidth
